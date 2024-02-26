@@ -158,11 +158,11 @@ public class Evenementservice implements IEvenement {
             rs = ste.executeQuery(req);
             if (rs.next()) {
                 int id = rs.getInt("id");
-                String type_e = rs.getString("type");
+                String type_e = rs.getString("Idtype");
                 String lieu = rs.getString("lieu");
                 String description = rs.getString("description");
-                String beginAt = rs.getString("begin_at");
-                String finishAt = rs.getString("finish_at");
+                String beginAt = rs.getString("beginat");
+                String finishAt = rs.getString("finishat");
                 int capacite = rs.getInt("capacite");
                 float prix = rs.getFloat("prix");
 
@@ -206,9 +206,10 @@ public class Evenementservice implements IEvenement {
                 EvenementType et = new EvenementTypeServices().recupererEventTypeByType(type_e);
                 String nom = rs.getString("nom");
 
-                Evenement e = new Evenement(nom, lieu, description, beginAt, finishAt,
+                Evenement e = new Evenement(id,nom, lieu, description, beginAt, finishAt,
                         capacite,  prix, et
                 );
+                System.out.println(e);
                 return e;
 
             }
@@ -216,7 +217,7 @@ public class Evenementservice implements IEvenement {
             Logger.getLogger(EvenementTypeServices.class.getName()).log(Level.SEVERE, null, ex);
         }
         Evenement e = new Evenement();
-
+        System.out.println(e);
         return e;
     }
 

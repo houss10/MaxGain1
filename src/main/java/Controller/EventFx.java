@@ -308,15 +308,13 @@ public class EventFx implements Initializable {
 
                     EvenementType et = new EvenementTypeServices().recupererEventTypeByType(Event_EventType.getSelectionModel().getSelectedItem().toString());
                     // System.out.println(et);
-                    Evenement e = new Evenement(nom, lieu, description, beginAt, finishAt, Integer.parseInt(capacite),  Float.parseFloat(prix), et);
+                    Evenement e = new Evenement(Integer.parseInt(id),nom, lieu, description, beginAt, finishAt, Integer.parseInt(capacite),  Float.parseFloat(prix), et);
                     boolean add = new Evenementservice().modifierEvenement(e);
-                    // System.out.println(add);
-                    //  System.out.println(e);
+                     System.out.println(add);
+                      System.out.println(e);
 
-                    /* EvenementType et = new EvenementType(2, "challenge");
-        Evenement e = new Evenement("zzzzzzzz", "zzzzzzzzz", "zzzzzzzzz", "2023-03-11 01:40:01", "2023-03-11 01:40:01", 33, 46, 33, et);
 
-        boolean add = new EvenementService().modifierEvenement(e);*/
+
                     alert = new Alert(Alert.AlertType.INFORMATION);
                     alert.setTitle("Information Message");
                     alert.setHeaderText(null);

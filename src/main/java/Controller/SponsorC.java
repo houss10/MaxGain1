@@ -271,27 +271,27 @@ public class SponsorC implements Initializable {
      */
     @FXML
     public void SponsorAdd() {
-     //   String regexNom = "^[a-zA-Z0-9]+$";
-      //  String regexMail = "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$";
+        String regexNom = "^[a-zA-Z0-9]+$";
+        String regexMail = "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$";
         try {
             Sponsor_SponsorId.setText(String.valueOf(""));
 
             Alert alert;
-//            if (Sponsor_SponsorType.getSelectionModel().getSelectedItem() == null
-//                    || !(Sponsor_SponsorId.getText().isEmpty())
-//                    || Sponsor_SponsorName.getText().isEmpty()
-//                    || Sponsor_SponsorMail.getText().isEmpty()
-//                    || !(Sponsor_SponsorName.getText().matches(regexNom))
-//                    || !(Sponsor_SponsorMail.getText().matches(regexMail))
-//                    || getData.path == null || getData.path == "") {
-//                alert = new Alert(Alert.AlertType.ERROR);
-//                alert.setTitle("Error Message");
-//                alert.setHeaderText(null);
-//                alert.setContentText("Please fill all blank fields but not the id");
-//                alert.setContentText("le nom ne peut avoir que des caracteres et des chiffres");
-//                alert.setContentText("l' email doit etre comme suit 'exemple@exemple.com'");
-//                alert.showAndWait();
-//            } else {
+            if (Sponsor_SponsorType.getSelectionModel().getSelectedItem() == null
+                    || !(Sponsor_SponsorId.getText().isEmpty())
+                    || Sponsor_SponsorName.getText().isEmpty()
+                    || Sponsor_SponsorMail.getText().isEmpty()
+                    || !(Sponsor_SponsorName.getText().matches(regexNom))
+                    || !(Sponsor_SponsorMail.getText().matches(regexMail))
+                    || getData.path == null || getData.path == "") {
+                alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Error Message");
+                alert.setHeaderText(null);
+                alert.setContentText("Please fill all blank fields but not the id");
+                alert.setContentText("le nom ne peut avoir que des caracteres et des chiffres");
+                alert.setContentText("l' email doit etre comme suit 'exemple@exemple.com'");
+                alert.showAndWait();
+            } else {
 
                 /* boolean exist = new EvenementTypeService().checkEventTypeExist(TypeEvent_TypeEvent.getText());
 
@@ -312,7 +312,7 @@ public class SponsorC implements Initializable {
                 SponsorType et = new SponsorTypeService().recupererSponsorTypeByType(Sponsor_SponsorType.getSelectionModel().getSelectedItem().toString());
                 //  System.out.println(et);
                 Evenement ev = new Evenementservice().recupererEventByName(Sponsor_Evenement.getSelectionModel().getSelectedItem().toString());
-                //  System.out.println(ev);
+                  System.out.println(ev);
                 Sponsor s = new Sponsor(nom, getData.path, email, et, ev);
 
                 boolean add = new SponsorService().ajouterSponsor(s);
@@ -325,7 +325,7 @@ public class SponsorC implements Initializable {
 
                 SponsorAfficher();
 
-           // }
+            }
             //}
 
         } catch (Exception e) {
