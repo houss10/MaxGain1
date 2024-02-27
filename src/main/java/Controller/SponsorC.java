@@ -39,80 +39,6 @@ import java.util.Optional;
 import java.util.ResourceBundle;
 
 public class SponsorC implements Initializable {
-    @FXML
-    private TextField Event_EventCapacite;
-
-    @FXML
-    private TextField Event_EventDescription;
-
-    @FXML
-    private TextField Event_EventId;
-
-    @FXML
-    private TextField Event_EventLieu;
-
-    @FXML
-    private TextField Event_EventNom;
-
-    @FXML
-    private TextField Event_EventPrix;
-
-    @FXML
-    private ComboBox<?> Event_EventType;
-
-    @FXML
-    private Button Event_addBtn;
-
-    @FXML
-    private Button Event_button;
-
-    @FXML
-    private Button Event_clearBtn;
-
-    @FXML
-    private TableColumn<?, ?> Event_col_BeginAt;
-
-    @FXML
-    private TableColumn<?, ?> Event_col_Capacite;
-
-    @FXML
-    private TableColumn<?, ?> Event_col_Description;
-
-    @FXML
-    private TableColumn<?, ?> Event_col_EventId;
-
-    @FXML
-    private TableColumn<?, ?> Event_col_FinishAt;
-
-    @FXML
-    private TableColumn<?, ?> Event_col_Lieu;
-
-    @FXML
-    private TableColumn<?, ?> Event_col_Nom;
-
-    @FXML
-    private TableColumn<?, ?> Event_col_Prix;
-
-    @FXML
-    private TableColumn<?, ?> Event_col_Type;
-
-    @FXML
-    private Button Event_deleteBtn;
-
-    @FXML
-    private AnchorPane Event_form;
-
-    @FXML
-    private TextField Event_search;
-
-    @FXML
-    private TableView<?> Event_tableView;
-
-    @FXML
-    private Button Event_updateBtn;
-
-    @FXML
-    private Button OpenSystem;
 
     @FXML
     private ComboBox<String> Sponsor_Evenement;
@@ -129,110 +55,16 @@ public class SponsorC implements Initializable {
     @FXML
     private ComboBox<String> Sponsor_SponsorType;
 
-    @FXML
-    private Button Sponsor_addBtn;
 
-    @FXML
-    private Button Sponsor_button;
-
-    @FXML
-    private Button Sponsor_deleteBtn;
-
-    @FXML
-    private AnchorPane Sponsor_form;
 
     @FXML
     private ImageView Sponsor_image;
 
-    @FXML
-    private Button Sponsor_importBtn;
-
-    @FXML
-    private Button Sponsor_updateBtn;
-
-    @FXML
-    private TextField TypeEvent_TypeEvent;
-
-    @FXML
-    private TextField TypeEvent_TypeEventId;
-
-    @FXML
-    private Button TypeEvent_addBtn;
-
-    @FXML
-    private Button TypeEvent_button;
-
-    @FXML
-    private Button TypeEvent_clearBtn;
-
-    @FXML
-    private TableColumn<?, ?> TypeEvent_col_TypeEvent;
-
-    @FXML
-    private TableColumn<?, ?> TypeEvent_col_TypeEventId;
-
-    @FXML
-    private Button TypeEvent_deleteBtn;
-
-    @FXML
-    private AnchorPane TypeEvent_form;
-
-    @FXML
-    private TextField TypeEvent_search;
-
-    @FXML
-    private TableView<?> TypeEvent_tableView;
-
-    @FXML
-    private Button TypeEvent_updateBtn;
-
-    @FXML
-    private TextField TypeSponsor_Type;
-
-    @FXML
-    private TextField TypeSponsor_TypeID;
-
-    @FXML
-    private Button TypeSponsor_addBtn;
-
-    @FXML
-    private Button TypeSponsor_button;
-
-    @FXML
-    private Button TypeSponsor_clearBtn;
-
-    @FXML
-    private TableColumn<?, ?> TypeSponsor_col_TypeSponsor;
-
-    @FXML
-    private TableColumn<?, ?> TypeSponsor_col_TypeSponsorId;
-
-    @FXML
-    private Button TypeSponsor_deleteBtn;
-
-    @FXML
-    private AnchorPane TypeSponsor_form;
-
-    @FXML
-    private TextField TypeSponsor_search;
-
-    @FXML
-    private TableView<?> TypeSponsor_tableView;
-
-    @FXML
-    private Button TypeSponsor_updateBtn;
-
-    @FXML
-    private ImageView addEmployee_image1;
-
-    @FXML
-    private Button addEmployee_importBtn1;
 
     @FXML
     private AnchorPane main_form;
 
-    @FXML
-    private ScrollPane scroll;
+
 
     @FXML
     private GridPane sponsorGrid;
@@ -271,27 +103,27 @@ public class SponsorC implements Initializable {
      */
     @FXML
     public void SponsorAdd() {
-     //   String regexNom = "^[a-zA-Z0-9]+$";
-      //  String regexMail = "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$";
+        String regexNom = "^[a-zA-Z0-9]+$";
+        String regexMail = "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$";
         try {
             Sponsor_SponsorId.setText(String.valueOf(""));
 
             Alert alert;
-//            if (Sponsor_SponsorType.getSelectionModel().getSelectedItem() == null
-//                    || !(Sponsor_SponsorId.getText().isEmpty())
-//                    || Sponsor_SponsorName.getText().isEmpty()
-//                    || Sponsor_SponsorMail.getText().isEmpty()
-//                    || !(Sponsor_SponsorName.getText().matches(regexNom))
-//                    || !(Sponsor_SponsorMail.getText().matches(regexMail))
-//                    || getData.path == null || getData.path == "") {
-//                alert = new Alert(Alert.AlertType.ERROR);
-//                alert.setTitle("Error Message");
-//                alert.setHeaderText(null);
-//                alert.setContentText("Please fill all blank fields but not the id");
-//                alert.setContentText("le nom ne peut avoir que des caracteres et des chiffres");
-//                alert.setContentText("l' email doit etre comme suit 'exemple@exemple.com'");
-//                alert.showAndWait();
-//            } else {
+            if (Sponsor_SponsorType.getSelectionModel().getSelectedItem() == null
+                    || !(Sponsor_SponsorId.getText().isEmpty())
+                    || Sponsor_SponsorName.getText().isEmpty()
+                    || Sponsor_SponsorMail.getText().isEmpty()
+                    || !(Sponsor_SponsorName.getText().matches(regexNom))
+                    || !(Sponsor_SponsorMail.getText().matches(regexMail))
+                    || getData.path == null || getData.path == "") {
+                alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Error Message");
+                alert.setHeaderText(null);
+                alert.setContentText("Please fill all blank fields but not the id");
+                alert.setContentText("le nom ne peut avoir que des caracteres et des chiffres");
+                alert.setContentText("l' email doit etre comme suit 'exemple@exemple.com'");
+                alert.showAndWait();
+            } else {
 
                 /* boolean exist = new EvenementTypeService().checkEventTypeExist(TypeEvent_TypeEvent.getText());
 
@@ -312,7 +144,7 @@ public class SponsorC implements Initializable {
                 SponsorType et = new SponsorTypeService().recupererSponsorTypeByType(Sponsor_SponsorType.getSelectionModel().getSelectedItem().toString());
                 //  System.out.println(et);
                 Evenement ev = new Evenementservice().recupererEventByName(Sponsor_Evenement.getSelectionModel().getSelectedItem().toString());
-                //  System.out.println(ev);
+                  System.out.println(ev);
                 Sponsor s = new Sponsor(nom, getData.path, email, et, ev);
 
                 boolean add = new SponsorService().ajouterSponsor(s);
@@ -325,7 +157,7 @@ public class SponsorC implements Initializable {
 
                 SponsorAfficher();
 
-           // }
+            }
             //}
 
         } catch (Exception e) {
@@ -442,50 +274,7 @@ public class SponsorC implements Initializable {
      * **********setChosen Sponsor****************************
      */
 
-    /*-----------------------------------------------------------------------*/
- /*@FXML
-    public void SponsorAfficherchatgpt() {
 
-        ObservableList<Sponsor> sponsors = new SponsorService().GetAll();
-
-        int row = 0;
-        int col = 0;
-        for (Sponsor sponsor : sponsors) {
-            // Créer une box pour le sponsor
-            VBox sponsorBox = new VBox();
-            sponsorBox.setAlignment(Pos.CENTER);
-            sponsorBox.setSpacing(10);
-            sponsorBox.getStyleClass().add("sponsor-box");
-
-            // Ajouter le logo du sponsor
-            ImageView logo = new ImageView(new Image(new File(sponsor.getLogo()).toURI().toString()));
-            logo.setFitWidth(100);
-            logo.setPreserveRatio(true);
-            logo.setFitWidth(100);
-            logo.setFitHeight(100);
-
-            sponsorBox.getChildren().add(logo);
-
-            // Ajouter le nom et l'email du sponsor
-            Label nameLabel = new Label(sponsor.getNom());
-            nameLabel.getStyleClass().add("name-label");
-
-            Label emailLabel = new Label(sponsor.getEmail());
-            emailLabel.getStyleClass().add("email-label");
-
-            sponsorBox.getChildren().addAll(nameLabel, emailLabel);
-
-            // Ajouter la box au GridPane
-            sponsorGrid.add(sponsorBox, col, row);
-
-            col++;
-            if (col == 3) {
-                col = 0;
-                row++;
-            }
-        }
-
-    }*/
     @FXML
     public String SponsorInsertImage() {
         Image image;

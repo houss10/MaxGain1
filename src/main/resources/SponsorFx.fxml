@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
 <?import java.lang.String?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
@@ -96,6 +97,11 @@
 
                                             </graphic>
                                         </Button>
+                              <FontAwesomeIcon glyphName="USER" layoutX="96.0" layoutY="95.0" size="7em" />
+                              <FontAwesomeIcon glyphName="PLUS" layoutX="19.0" layoutY="214.0" size="2em" />
+                              <FontAwesomeIcon glyphName="PLUS" layoutX="19.0" layoutY="240.0" size="2em" />
+                              <FontAwesomeIcon glyphName="PLUS" layoutX="19.0" layoutY="266.0" size="2em" />
+                              <FontAwesomeIcon glyphName="PLUS" layoutX="19.0" layoutY="292.0" size="2em" />
                                     </children></AnchorPane>
                             </children>
                         </AnchorPane>

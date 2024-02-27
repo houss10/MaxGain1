@@ -21,6 +21,18 @@ public class Evenement {
         this.type = type;
     }
 
+    public Evenement(int id,String nom, String lieu, String description, String beginat, String finishat, int capacite, float prix, EvenementType type) {
+        this.nom = nom;
+        this.lieu = lieu;
+        this.description = description;
+        this.beginat = beginat;
+        this.finishat = finishat;
+        this.capacite = capacite;
+        this.id = id;
+        this.prix = prix;
+        this.type = type;
+    }
+
 
 
     public String getNom() {

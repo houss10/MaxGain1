@@ -16,7 +16,7 @@ public class MainFx extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/EventFx.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/FRONT/home.fxml"));
 
         Scene scene = new Scene(root);
 

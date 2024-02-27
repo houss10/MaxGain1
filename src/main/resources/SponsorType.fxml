@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
 <?import java.lang.String?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
@@ -96,6 +97,11 @@
 
                                             </graphic>
                                         </Button>
+                              <FontAwesomeIcon glyphName="USER" layoutX="89.0" layoutY="95.0" size="7em" />
+                              <FontAwesomeIcon glyphName="PLUS" layoutX="14.0" layoutY="214.0" size="2em" />
+                              <FontAwesomeIcon glyphName="PLUS" layoutX="14.0" layoutY="240.0" size="2em" />
+                              <FontAwesomeIcon glyphName="PLUS" layoutX="14.0" layoutY="266.0" size="2em" />
+                              <FontAwesomeIcon glyphName="PLUS" layoutX="14.0" layoutY="292.0" size="2em" />
                                     </children></AnchorPane>
                             </children>
                         </AnchorPane>
@@ -334,6 +340,7 @@
                                                         <Button fx:id="TypeSponsor_addBtn" layoutX="390.0" layoutY="200.0" mnemonicParsing="false" onAction="#SponsorTypeAdd" prefHeight="41.0" prefWidth="94.0" styleClass="add-btn" stylesheets="@Admin_dashboard_Event.css" text="Add" />
                                                         <Button fx:id="TypeSponsor_updateBtn" layoutX="277.0" layoutY="200.0" mnemonicParsing="false" onAction="#SponsorTypeUpdate" prefHeight="41.0" prefWidth="94.0" styleClass="update-btn" stylesheets="@Admin_dashboard_Event.css" text="Update" />
                                                         <TextField fx:id="TypeSponsor_TypeID" layoutX="345.0" layoutY="99.0" prefHeight="25.0" prefWidth="172.0" styleClass="textfield" stylesheets="@Admin_dashboard_Event.css" />
+                                          <FontAwesomeIcon glyphName="SEARCH" layoutX="22.0" layoutY="33.0" />
                                                     </children>
                                                 </AnchorPane>
                                             </children>
